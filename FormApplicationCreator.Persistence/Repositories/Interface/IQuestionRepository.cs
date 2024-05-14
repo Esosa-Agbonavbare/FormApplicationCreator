@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FormApplicationCreator.Domain.Entities;
+using FormApplicationCreator.Domain.Enums;
 
 namespace FormApplicationCreator.Persistence.Repositories.Interface
 {
-    internal interface IQuestionRepository
+    public interface IQuestionRepository
     {
+        Task<Question> GetByIdAsync(string id);
+        Task<List<Question>> GetAllByApplicationFormIdAsync(string applicationFormId);
+        Task AddAsync(IEnumerable<Question> questions);
+        Task UpdateByApplicationFormIdAsync(string applicationFormId, List<Question> updatedQuestions);
+        Task DeleteAsync(string id);
+        Task<List<Question>> GetAllTypeByApplicationFormIdAsync(string applicationFormId, QuestionType type);
     }
 }

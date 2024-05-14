@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormApplicationCreator.Doma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormApplicationCreator.Persistence", "FormApplicationCreator.Persistence\FormApplicationCreator.Persistence.csproj", "{61E7FA89-2469-439B-A999-56D597722162}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormApplicationCreator.Application", "FormApplicationCreator.Application\FormApplicationCreator.Application.csproj", "{6920F504-7F22-4097-9B0C-326E860485C3}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{61E7FA89-2469-439B-A999-56D597722162}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{61E7FA89-2469-439B-A999-56D597722162}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{61E7FA89-2469-439B-A999-56D597722162}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6920F504-7F22-4097-9B0C-326E860485C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6920F504-7F22-4097-9B0C-326E860485C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6920F504-7F22-4097-9B0C-326E860485C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6920F504-7F22-4097-9B0C-326E860485C3}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
