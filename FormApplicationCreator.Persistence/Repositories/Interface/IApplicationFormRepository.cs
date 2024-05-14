@@ -1,12 +1,13 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FormApplicationCreator.Domain.Entities;
 
 namespace FormApplicationCreator.Persistence.Repositories.Interface
 {
-    internal interface IApplicationFormRepository
+    public interface IApplicationFormRepository
     {
+        Task AddAsync(ApplicationForm applicationForm);
+        Task DeleteAsync(ApplicationForm applicationForm);
+        Task<ApplicationForm> GetByIdAsync(string applicationFormId);
+        Task<List<ApplicationForm>> GetAllAsync();
+        Task UpdateAsync(ApplicationForm applicationForm);
     }
 }

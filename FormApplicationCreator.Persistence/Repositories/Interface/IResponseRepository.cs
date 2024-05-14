@@ -1,12 +1,11 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FormApplicationCreator.Domain.Entities;
 
 namespace FormApplicationCreator.Persistence.Repositories.Interface
 {
-    internal interface IResponseRepository
+    public interface IResponseRepository
     {
+        Task AddAsync(IEnumerable<Response> responses);
+        Task<List<Response>> GetAllByCandidateIdAsync(string candidateId);
+        Task UpdateByCandidateIdAsync(string candidateId, List<Response> updatedResponses);
     }
 }

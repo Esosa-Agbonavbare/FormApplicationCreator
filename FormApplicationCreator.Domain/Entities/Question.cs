@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FormApplicationCreator.Domain.Enums;
 
 namespace FormApplicationCreator.Domain.Entities
 {
-    internal class Question
+    public class Question : BaseEntity
     {
+        public QuestionType QuestionType { get; set; }
+        public string QuestionText { get; set; }
+        public List<string> Choices { get; set; }
+        public int? MaxChoicesAllowed { get; set; }
+        public bool EnableOtherOption { get; set; }
+        public string ApplicationFormId { get; set; }
     }
 }

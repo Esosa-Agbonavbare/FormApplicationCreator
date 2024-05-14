@@ -1,12 +1,12 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FormApplicationCreator.Domain.Enums
+﻿namespace FormApplicationCreator.Domain.Enums
 {
-    internal class QuestionType
+    public enum QuestionType
     {
+        Multiple_Choice = 1,
+        Paragraph,
+        Yes_No,
+        Dropdown,
+        Date,
+        Number
     }
 }

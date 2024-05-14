@@ -5,6 +5,10 @@ VisualStudioVersion = 17.9.34714.143
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormApplicationCreator.API", "FormApplicationCreator.API\FormApplicationCreator.API.csproj", "{4FFD59D2-BCCB-4DA2-9FBC-479EB1ED115B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormApplicationCreator.Domain", "FormApplicationCreator.Domain\FormApplicationCreator.Domain.csproj", "{862F2140-D1C0-480B-91B4-2BF4C9697760}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FormApplicationCreator.Persistence", "FormApplicationCreator.Persistence\FormApplicationCreator.Persistence.csproj", "{61E7FA89-2469-439B-A999-56D597722162}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{4FFD59D2-BCCB-4DA2-9FBC-479EB1ED115B}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4FFD59D2-BCCB-4DA2-9FBC-479EB1ED115B}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4FFD59D2-BCCB-4DA2-9FBC-479EB1ED115B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{862F2140-D1C0-480B-91B4-2BF4C9697760}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{862F2140-D1C0-480B-91B4-2BF4C9697760}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{862F2140-D1C0-480B-91B4-2BF4C9697760}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{862F2140-D1C0-480B-91B4-2BF4C9697760}.Release|Any CPU.Build.0 = Release|Any CPU
+		{61E7FA89-2469-439B-A999-56D597722162}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{61E7FA89-2469-439B-A999-56D597722162}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{61E7FA89-2469-439B-A999-56D597722162}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{61E7FA89-2469-439B-A999-56D597722162}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
