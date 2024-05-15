@@ -7,7 +7,9 @@ namespace FormApplicationCreator.Persistence.Repositories.Interface
     {
         Task<Question> GetByIdAsync(string id);
         Task<List<Question>> GetAllByApplicationFormIdAsync(string applicationFormId);
-        Task AddAsync(IEnumerable<Question> questions);
+        Task AddAsync(Question question);
+        Task AddListAsync(IEnumerable<Question> questions);
+        Task UpdateAsync(Question question);
         Task UpdateByApplicationFormIdAsync(string applicationFormId, List<Question> updatedQuestions);
         Task DeleteAsync(string id);
         Task<List<Question>> GetAllTypeByApplicationFormIdAsync(string applicationFormId, QuestionType type);

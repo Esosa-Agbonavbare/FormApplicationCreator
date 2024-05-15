@@ -1,12 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FormApplicationCreator.Application.DTOs
+﻿namespace FormApplicationCreator.Application.DTOs
 {
-    internal class ResponseDto
+    public class ResponseDto
     {
+        public string QuestionId { get; set; }
+        public string Answer { get; set; }
     }
 }

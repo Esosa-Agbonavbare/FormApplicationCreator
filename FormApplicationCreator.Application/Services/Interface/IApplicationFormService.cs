@@ -1,4 +1,7 @@
-﻿namespace FormApplicationCreator.Application.Services.Interface
+﻿using FormApplicationCreator.Application.DTOs;
+using FormApplicationCreator.Domain;
+
+namespace FormApplicationCreator.Application.Services.Interface
 {
     public interface IApplicationFormService
     {

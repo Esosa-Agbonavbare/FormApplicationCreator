@@ -14,7 +14,13 @@ namespace FormApplicationCreator.Persistence.Repositories.Implementation
             _context = context;
         }
 
-        public async Task AddAsync(IEnumerable<Question> questions)
+        public async Task AddAsync(Question question)
+        {
+            await _context.Questions.AddAsync(question);
+            await _context.SaveChangesAsync();
+        }
+
+        public async Task AddListAsync(IEnumerable<Question> questions)
         {
             _context.Questions.AddRange(questions);
             await _context.SaveChangesAsync();
@@ -47,6 +53,11 @@ namespace FormApplicationCreator.Persistence.Repositories.Implementation
                 .ToListAsync();
         }
 
+        public async Task UpdateAsync(Question question)
+        {
+            _context.Questions.Update(question);
+            await _context.SaveChangesAsync();
+        }
 
         public async Task UpdateByApplicationFormIdAsync(string applicationFormId, List<Question> updatedQuestions)
         {

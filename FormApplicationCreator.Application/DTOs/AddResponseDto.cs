@@ -1,12 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
 
 namespace FormApplicationCreator.Application.DTOs
 {
-    internal class AddResponseDto
+    public class AddResponseDto
     {
+        [Required(ErrorMessage = "The answer field is required.")]
+        public string Answer { get; set; }
     }
 }

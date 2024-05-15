@@ -28,7 +28,7 @@ namespace FormApplicationCreator.Application.Services.Implementation
                 var applicationForm = _mapper.Map<ApplicationForm>(applicationFormDto);
                 await _applicationFormRepository.AddAsync(applicationForm);
                 var questions = applicationFormDto.Questions.Select(r => _mapper.Map<Question>(r));
-                await _questionRepository.AddAsync(questions);
+                await _questionRepository.AddListAsync(questions);
                 var responseDto = _mapper.Map<ApplicationFormResponseDto>(applicationForm);
                 return new ApiResponse<ApplicationFormResponseDto>(true, StatusCodes.Status201Created, "Application form added successfully.", responseDto);
             }

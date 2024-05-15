@@ -1,12 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using FormApplicationCreator.Domain.Enums;
 
 namespace FormApplicationCreator.Application.DTOs
 {
-    internal class QuestionResponseDto
+    public class QuestionResponseDto
     {
+        public string QuestionId { get; set; }
+        public QuestionType QuestionType { get; set; }
+        public string QuestionTypeString => QuestionType.ToString().Replace("_", " ");
+        public string QuestionText { get; set; }
+        public List<string> Choices { get; set; }
+        public int? MaxChoicesAllowed { get; set; }
+        public bool EnableOtherOption { get; set; } = false;
     }
 }
