@@ -12,14 +12,16 @@ namespace FormApplicationCreator.Application.Services.Implementation
     public class QuestionService : IQuestionService
     {
         private readonly IQuestionRepository _questionRepository;
-        private readonly IMapper _mapper;
         private readonly IApplicationFormRepository _applicationFormRepository;
+        private readonly IMapper _mapper;
 
-        public QuestionService(IQuestionRepository questionRepository, IMapper mapper, IApplicationFormRepository applicationFormRepository)
+
+        public QuestionService(IQuestionRepository questionRepository, IApplicationFormRepository applicationFormRepository, IMapper mapper)
         {
             _questionRepository = questionRepository;
-            _mapper = mapper;
             _applicationFormRepository = applicationFormRepository;
+            _mapper = mapper;
+
         }
 
         public async Task<ApiResponse<QuestionResponseDto>> AddQuestionAsync(string applicationFormId, AddQuestionDto addQuestionDto)

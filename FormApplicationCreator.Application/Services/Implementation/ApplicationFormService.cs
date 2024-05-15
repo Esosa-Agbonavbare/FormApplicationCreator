@@ -11,14 +11,14 @@ namespace FormApplicationCreator.Application.Services.Implementation
     public class ApplicationFormService : IApplicationFormService
     {
         private readonly IApplicationFormRepository _applicationFormRepository;
-        private readonly IMapper _mapper;
         private readonly IQuestionRepository _questionRepository;
+        private readonly IMapper _mapper;
 
-        public ApplicationFormService(IApplicationFormRepository applicationFormRepository, IMapper mapper, IQuestionRepository questionRepository)
+        public ApplicationFormService(IApplicationFormRepository applicationFormRepository, IQuestionRepository questionRepository, IMapper mapper)
         {
             _applicationFormRepository = applicationFormRepository;
-            _mapper = mapper;
             _questionRepository = questionRepository;
+            _mapper = mapper;
         }
 
         public async Task<ApiResponse<ApplicationFormResponseDto>> AddApplicationFormAsync(AddApplicationFormDto applicationFormDto)
@@ -46,15 +46,15 @@ namespace FormApplicationCreator.Application.Services.Implementation
                 var existingApplicationForm = await _applicationFormRepository.GetByIdAsync(applicationFormId);
                 if (existingApplicationForm == null)
                 {
-                    return new ApiResponse<bool>(false, StatusCodes.Status404NotFound, "Application form not found.", false);
+                    return new ApiResponse<bool>(false, StatusCodes.Status404NotFound, "Application form not found.");
                 }
                 await _applicationFormRepository.DeleteAsync(existingApplicationForm);
-                return new ApiResponse<bool>(true, StatusCodes.Status200OK, "Application form deleted successfully.", true);
+                return new ApiResponse<bool>(true, StatusCodes.Status200OK, "Application form deleted successfully.");
             }
             catch (Exception ex)
             {
                 Console.WriteLine($"Error occurred while deleting application form: {ex.Message}");
-                return new ApiResponse<bool>(false, StatusCodes.Status500InternalServerError, "An error occurred while deleting the application form.", false);
+                return new ApiResponse<bool>(false, StatusCodes.Status500InternalServerError, "An error occurred while deleting the application form.", [ex.Message]);
             }
         }
 

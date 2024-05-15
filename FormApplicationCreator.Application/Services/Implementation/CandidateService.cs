@@ -11,14 +11,14 @@ namespace FormApplicationCreator.Application.Services.Implementation
     public class CandidateService : ICandidateService
     {
         private readonly ICandidateRepository _candidateRepository;
-        private readonly IMapper _mapper;
         private readonly IResponseRepository _responseRepository;
+        private readonly IMapper _mapper;
 
-        public CandidateService(ICandidateRepository candidateRepository, IMapper mapper, IResponseRepository responseRepository)
+        public CandidateService(ICandidateRepository candidateRepository, IResponseRepository responseRepository, IMapper mapper)
         {
             _candidateRepository = candidateRepository;
-            _mapper = mapper;
             _responseRepository = responseRepository;
+            _mapper = mapper;
         }
 
         public async Task<ApiResponse<CandidateResponseDto>> AddCandidateAsync(AddCandidateDto addCandidateDto)
